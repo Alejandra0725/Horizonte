@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Imprima", sans-serif;
+}
+
+/* Navbar Start */
+#navbar{
+    background:#02031a;
+}
+#logo{
+    font-size: 38px;
+    font-weight: 550;
+    color: #48D1CC;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    border-radius: 6px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background: #ff0841;
+    color: white;
+}
+
+/* Navbar End */
+
+/* Home Section Start */
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(./images/background\ img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .content{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h5{
+    color: white;
+    font-family: "Imprima", sans-serif;
+    font-size: 38px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+.home .content h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after{
+    content: ' ';
+    color: #48D1CC;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "Francia";}
+    10%{content: "España";}
+    20%{content: "Venezuela";}
+    30%{content: "China";}
+    40%{content: "Inglaterra";}
+    50%{content: "Estados Unidos";}
+    60%{content: "Italia";}
+    70%{content: "Colombia";}
+    80%{content: "Corea del Sur";}
+    90%{content: "Alemania";}
+    100%{content: "Japón";}
+} 
+.home .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover{
+    background: #ff0841;
+    color: white;
+}
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+        font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 38px;
+    }
+    .home .content p{
+        font-size: 13px;
+    }
+}
+/* Home Section End */
+
+/* Section Book Start */
+.book{
+    background: #02031a;
+    padding: 60px;
+}
+.main-text h1{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 3px 3px #ff0841;
+    font-weight: 600;
+}
+
+.book .card{
+    border-radius: 6px;
+    box-shadow: 0px 8px 10px -6px #000000;
+}
+
+.book .row{
+    margin-top: 40px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    width: 500px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0px 5px 5px -6px rgb(7, 98, 114);
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    width: 500px;
+    height: 150px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #ff0841;
+    color: white;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+/* Section Book End */
+
+
+
+
+
+/* Section Packages Start */
+.packages {
+    background: #eff0ff;
+    padding: 50px;
+}
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px #ff0841;
+}
+
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(10, 156, 175, 0.1) 0px 4px 12px;
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.packages .card .card-body p{
+    font-size: 15px;
+}
+.checked{
+    color: #ffe600;
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+    padding: 12px;
+    text-decoration: none;
+    background: #ff0841;
+    color: white;
+    border-radius: 8px;
+}
+/* Section Packages End */
+
+
+
+
+/* Section Services Start */
+.services{
+    background:#02031a;
+    padding: 50px;
+    
+}
+
+.services h1 {
+    color: white; 
+    text-shadow: 0px 3px 3px #ff0841;
+}
+
+.services .card{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border: none;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: #ff0841;
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+}
+.services .card .card-body{
+    text-align: center;
+}
+/* Section Services End */
+
+
+
+
+
+/* Section Gallary Start */
+.gallary{
+        background: #eff0ff;
+        padding: 60px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End */
+
+
+
+
+/* About Start */
+.about {
+    padding: 50px;
+    background: #02031a;
+}
+
+.about h1 {
+    color: white; 
+    text-shadow: 0px 3px 3px #ff0841;
+    margin-bottom: 20px;  
+}
+
+.about .card {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.about .card img {
+    border-radius: 10px;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #f0f0f0; 
+    transition: transform 0.3s; 
+}
+
+.about .card img:hover {
+    transform: scale(1.05); 
+}
+
+
+.about h2 {
+    color: white; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 10px 0;  
+}
+
+.about p {
+    color: white; 
+    font-weight: 500;
+    line-height: 1.6; 
+}
+
+#about-btn {
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ff0841;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    cursor: pointer;
+    display: inline-block; 
+    text-align: center; 
+}
+
+#about-btn:hover {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 765px) {
+    .about {
+        padding: 20px; 
+    }
+
+    #about-btn {
+        width: 100%; 
+        height: 45px; 
+    }
+}
+
+/* About End */
+
+
+
+
+/* Footer Start */
+#footer{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    background:#02031a;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px black;
+}
+#footer h1 {
+    color: #48D1CC;
+    font-family: "Protest Strike", sans-serif;
+}
+
+.social-links i{
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    background: #b10c43;
+    color: rgb(255, 246, 246);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #ff0841;
+}
+/* Footer End */
+
+
+
+
+
+
+
+
+
+
