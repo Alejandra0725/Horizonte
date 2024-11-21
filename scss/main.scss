@@ -177,10 +177,10 @@ $font-family: "Imprima", sans-serif;
     }
 }
 
-// Other Sections
+// Book Section
 .book {
     background: $background-color;
-    padding: 60px;
+    padding: 60px 20px; // Agregar espacio alrededor
 
     .main-text {
         h1 {
@@ -207,7 +207,7 @@ $font-family: "Imprima", sans-serif;
         input,
         textarea {
             width: 90%; // Ancho máximo del formulario
-            max-width: 500px; // Ancho máximo para pantallas más grandes
+            max-width: 400px; // Reducción de la anchura máxima para mejorar la responsividad
             margin-bottom: 15px; // Espacio entre los campos
             padding: 10px; // Añadir un poco de padding a los inputs
             border: 1px solid #ccc; // Estilo opcional para borde
@@ -686,9 +686,10 @@ $font-family: "Imprima", sans-serif;
     }
 }
 
+// Services Section
 .services {
     background: $background-color;
-    padding: 50px;
+    padding: 50px 20px; // Ajustar el padding lateral
 
     h1 {
         color: white;
