@@ -1,0 +1,493 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizonte</title>
+    <link rel="icon" href="images/favicon-emoji.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="logo"><strong>Horizonte</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#book">Viajes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#packages">Paquetes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pages/galeria.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+    <!-- Navbar End -->
+
+
+
+
+
+<!-- Home Section Start -->
+<div class="home">
+  <img src="images/background_img.png" alt="Background Image" class="background-image">
+  <div class="content">
+      <h5>Bienvenido al mundo</h5>
+      <h1>Visita <span class="changecontent"></span></h1>
+      <p>Haz tu reserva hoy mismo y vive una experiencia inolvidable</p>
+      <a href="#book">Reserva</a>
+  </div>
+</div>
+<!-- Home Section End -->
+
+
+
+
+
+
+    <!-- Section Book Start -->
+    <section class="book" id="book">
+      <div class="container">
+
+        <div class="main-text">
+          <h1>Viajes</h1>
+        </div>
+        
+        <div class="row">
+
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/book-img.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 py-3 py-md-0">
+            <form action="#">
+
+              <input type="text" class="form-control" placeholder="Destino" required><br>
+              <input type="text" class="form-control" placeholder="Cuantos" required><br>
+              <input type="date" class="form-control" placeholder="Llegada" required><br>
+              <input type="date" class="form-control" placeholder="Salida" required><br>
+              <textarea class="form-control" rows="5" name="text" placeholder="Ingrese su nombre y detalles"></textarea>
+              <input type="submit" value="Buscar" class="submit" required>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Section Book End -->
+
+
+
+
+
+
+
+
+    <!-- Section Packages Start -->
+    <section class="packages" id="packages">
+      <div class="container">
+        
+        <div class="main-txt">
+          <h1>Paquetes</h1>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/uk.png" alt="">
+              <div class="card-body">
+                <h3>Reino Unido</h3>
+                <p>Explora la rica historia y cultura de esta vibrante nación.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$600</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/france.png" alt="">
+              <div class="card-body">
+                <h3>Francia</h3>
+                <p>Descubre la elegancia de París y los viñedos de Burdeos.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$700</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/pakistan.png" alt="">
+              <div class="card-body">
+                <h3>Pakistan</h3>
+                <p>Adéntrate en la belleza natural y cultural de este país.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$400</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/italy.png" alt="">
+              <div class="card-body">
+                <h3>Italia</h3>
+                <p>Disfruta de la gastronomía y paisajes impresionantes aquí.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$800</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/india.png" alt="">
+              <div class="card-body">
+                <h3>India</h3>
+                <p>Experimenta la diversidad cultural y maravillas de la India.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$500</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./images/us.png" alt="">
+              <div class="card-body">
+                <h3>Estados Unidos</h3>
+                <p>Explora desde Nueva York hasta el Gran Cañón en uno.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star "></i>
+                  <i class="fa-solid fa-star "></i>
+                </div>
+                <h6>Precio: <strong>$550</strong></h6>
+                <a href="#book">Reservar ahora</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- Section Packages End -->
+
+
+
+
+
+
+
+<!-- Section Services Start -->
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="main-txt">
+      <h1>Servicios</h1>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-hotel"></i>
+          <div class="card-body">
+            <h3>Hoteles</h3>
+            <p>Alojamiento cómodo y conveniente para todos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-utensils"></i>
+          <div class="card-body">
+            <h3>Alimentos y bebidas</h3>
+            <p>Deliciosas comidas y refrescantes bebidas siempre.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-bullhorn"></i>
+          <div class="card-body">
+            <h3>Guía de seguridad</h3>
+            <p>Información crucial para garantizar su seguridad.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-globe-asia"></i>
+          <div class="card-body">
+            <h3>Alrededor del mundo</h3>
+            <p>Explora diversas culturas y experiencias únicas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-plane"></i>
+          <div class="card-body">
+            <h3>Viaje más rápido</h3>
+            <p>Tiempos de viaje optimizados para mayor comodidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-hiking"></i>
+          <div class="card-body">
+            <h3>Aventuras</h3>
+            <p>Experimenta emocionantes actividades al aire libre.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Section Services End -->
+
+
+
+
+
+    <!-- Section Gallary Start -->
+    <section class="gallary" id="gallary">
+      <div class="container">
+
+        <div class="main-txt">
+          <h1><span>Galeria</h1>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g1.png" alt="" height="230px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g2.png" alt="" height="230px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g3.png" alt="" height="230px">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g4.png" alt="" height="230px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g5.png" alt="" height="230px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="./images/g6.png" alt="" height="230px">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Section Gallary End -->
+
+
+
+
+
+
+
+<!-- About Start -->
+<section class="about" id="about">
+  <div class="container">
+
+    <div class="main-txt">
+      <h1>Sobre Nosotros</h1>
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-md-6 py-3 py-md-0">
+        <div class="card">
+          <img src="./images/about-img.png" alt="">
+        </div>
+      </div>
+
+      <div class="col-md-6 py-3 py-md-0">
+        <h2>Cómo funciona nuestra agencia de viajes</h2>
+        <p>
+          En nuestra agencia de viajes, nos apasiona ayudar a nuestros clientes a descubrir el mundo y crear recuerdos inolvidables.
+          Nuestro enfoque está diseñado para hacer que la planificación de tus vacaciones sea una experiencia sencilla y placentera.
+        </p>
+        <button id="about-btn" onclick="toggleMoreInfo()">Leer más...</button>
+        
+        <!-- Información adicional oculta por defecto -->
+        <div id="more-info" style="display: none; margin-top: 20px;">
+          <p>
+            Contamos con un equipo de profesionales experimentados que están listos para asesorarte en cada paso del camino.
+            Desde la elección del destino hasta la gestión de reservas y actividades, estamos aquí para hacer de tu viaje
+            una experiencia inolvidable. ¡Déjanos ayudarte a crear recuerdos que durarán toda la vida!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- About End -->
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <footer id="footer">
+      <a href="index.html" id="logo"><strong>Horizonte</strong></a>
+      <p>© 2024 Todos los derechos reservados | Horizonte</p>
+      <div class="social-links">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+
+    </footer>
+    <!-- Footer End -->
+
+
+    <script>
+      function toggleMoreInfo() {
+        var moreInfo = document.getElementById('more-info');
+        if (moreInfo.style.display === "none") {
+          moreInfo.style.display = "block";
+          document.getElementById("about-btn").innerText = "Leer menos...";
+        } else {
+          moreInfo.style.display = "none";
+          document.getElementById("about-btn").innerText = "Leer más...";
+        }
+      }
+    </script>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

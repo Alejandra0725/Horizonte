@@ -1,0 +1,797 @@
+// Variables
+$primary-color: #ff0841;
+$secondary-color: #48D1CC;
+$background-color: #02031a;
+$light-background: #eff0ff;
+$font-family: "Imprima", sans-serif;
+
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: $font-family;
+}
+
+// Navbar
+#navbar {
+    background: $background-color;
+
+    #logo {
+        font-size: 40px;
+        color: $secondary-color;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-nav {
+        margin-left: 20px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 18px;
+                font-weight: 550;
+                color: rgb(255, 255, 255);
+                letter-spacing: 3px;
+                border-radius: 6px;
+                transition: 0.5s ease;
+
+                &:hover {
+                    background: $primary-color;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    }
+}
+
+// Home Section
+.home {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        padding-top: 15%;
+
+        h5 {
+            font-size: 38px;
+            font-weight: 550;
+            text-shadow: 0px 1px 1px black;
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 550;
+            text-shadow: 0px 1px 1px black, 0px 2px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            text-shadow: 0px 1px 1px black;
+            margin-bottom: 30px;
+            margin-top: 5px;
+        }
+
+        a {
+            padding: 10px;
+            background: white;
+            color: black;
+            letter-spacing: 2px;
+            font-weight: 550;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.5s;
+
+            &:hover {
+                background: $primary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+// Animation for changecontent
+.changecontent::after {
+    content: ' ';
+    color: $secondary-color;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+    0% { content: "Francia"; }
+    10% { content: "España"; }
+    20% { content: "Venezuela"; }
+    30% { content: "China"; }
+    40% { content: "Inglaterra"; }
+    50% { content: "Estados Unidos"; }
+    60% { content: "Italia"; }
+    70% { content: "Colombia"; }
+    80% { content: "Corea del Sur"; }
+    90% { content: "Alemania"; }
+    100% { content: "Japón"; }
+}
+
+// Media Queries
+@media (max-width: 850px) {
+    .home {
+        background-position: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .home .content {
+        h5 {
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+// Other Sections
+.book {
+    background: $background-color;
+    padding: 60px;
+
+    .main-text {
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0px 3px 3px $primary-color;
+            font-weight: 600;
+        }
+    }
+
+    .card {
+        border-radius: 6px;
+        box-shadow: 0px 8px 10px -6px #000000;
+    }
+
+    .row {
+        margin-top: 40px;
+    }
+
+    form {
+        input {
+            padding: 10px;
+            color: black;
+            border: none;
+            width: 500px;
+            outline: none;
+            font-size: 16px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 5px -6px rgb(7, 98, 114);
+        }
+
+        textarea {
+            border: none;
+            border-radius: 10px;
+            resize: none;
+            box-shadow: 0px 5px 5px -6px black;
+            width: 500px;
+            height: 150px;
+        }
+    }
+
+    .submit {
+        width: 160px;
+        font-size: 16px;
+        font-weight: 550;
+        background: $primary-color;
+        color: white;
+        margin-top: 15px;
+        transition: 0.5s;
+
+        &:hover {
+            width: 170px;
+        }
+    }
+}
+
+// Responsive for Book Section
+@media (max-width: 765px) {
+    .book {
+        padding: 0;
+
+        .main-text h1 {
+            padding: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    }
+}
+
+// Packages Section
+.packages {
+    background: $light-background;
+    padding: 60px 20px;
+    border-radius: 15px; // Añadido para suavizar esquinas
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 30px; // Añadido para un efecto de profundidad
+
+    .main-txt {
+        h1 {
+            text-align: center;
+            margin: 40px 0;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif; // Tipografía moderna
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            color: $primary-color;
+        }
+    }
+
+    .card {
+        border-radius: 15px; // Esquinas más suaves
+        border: none;
+        background: #fff; // Fondo blanco para las tarjetas
+        transition: transform 0.2s ease, box-shadow 0.2s ease; // Transición suave
+
+        &:hover {
+            transform: translateY(-5px); // Efecto de elevación al pasar el mouse
+            box-shadow: rgba(0, 0, 0, 0.2) 0 10px 20px;
+        }
+
+        img {
+            border-radius: 15px 15px 0 0; // Esquinas superiores redondeadas para la imagen
+            width: 100%;
+            height: auto; // Asegúrate de que las imágenes mantengan su proporción
+        }
+
+        .card-body {
+            background: transparent;
+            padding: 20px;
+
+            h3 {
+                font-size: 28px; // Aumentado para mayor impacto
+                font-weight: 600;
+                color: $primary-color; // Usa el color primario para el título
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5; // Aumentar la altura de línea para mejor legibilidad
+            }
+
+            h6 {
+                font-size: 22px;
+                font-weight: 400; // Fuera del estilo de encabezado
+                color: $secondary-color; // Color secundario para un contraste agradable
+            }
+
+            a {
+                display: inline-block; // Para que el padding se aplique correctamente
+                margin-top: 15px;
+                padding: 12px 20px;
+                text-decoration: none;
+                background: $primary-color;
+                color: white;
+                border-radius: 25px; // Botón más redondeado
+                text-align: center;
+                transition: background 0.3s ease, transform 0.2s ease;
+
+                &:hover {
+                    background: darken($primary-color, 10%); // Oscurecer el color al pasar el mouse
+                    transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                }
+            }
+        }
+    }
+}
+
+
+// Services Section
+.services {
+    background: $background-color;
+    padding: 50px;
+
+    h1 {
+        color: white;
+        text-shadow: 0px 3px 3px $primary-color;
+        text-align: center;
+    }
+
+    .card {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border: none;
+        cursor: pointer;
+
+        i {
+            font-size: 80px;
+            text-align: center;
+            color: $primary-color;
+            margin-top: 20px;
+        }
+        
+        .card-body {
+            text-align: center;
+
+            h3 {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Gallery Section
+.gallary {
+    background: $light-background;
+    padding: 60px;
+
+    h1 {
+        color: rgb(0, 0, 0);
+        text-shadow: 0px 3px 3px $primary-color;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        cursor: pointer;
+
+        img {
+            border-radius: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// About Section
+.about {
+    padding: 50px;
+    background: $background-color;
+
+    h1 {
+        color: white;
+        text-shadow: 0px 3px 3px $primary-color;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f0f0f0;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    h2 {
+        color: white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: 10px 0;
+    }
+
+    p {
+        color: white;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    #about-btn {
+        width: 150px;
+        height: 38px;
+        border: none;
+        border-radius: 5px;
+        background: $primary-color;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 550;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 765px) {
+        padding: 20px;
+
+        #about-btn {
+            width: 100%;
+            height: 45px;
+        }
+    }
+}
+
+// Footer
+#footer {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    background: $background-color;
+    padding: 40px 20px; // Agregar un poco de padding
+
+    h1 {
+        font-weight: 700; // Hacer el peso de la fuente más audaz
+        padding-top: 20px; // Reducido un poco el padding superior
+        color: $secondary-color;
+        font-family: "Protest Strike", sans-serif;
+        font-size: 2.5rem; // Tamaño de fuente más grande
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); // Mayor efecto de sombra
+        letter-spacing: 1px; // Espaciado de letras para un toque elegante
+    }
+
+    p {
+        color: $secondary-color;
+        font-family: "Protest Strike", sans-serif;
+        font-size: 1.1rem; // Un poco más grande para mayor legibilidad
+        margin: 10px 0; // Separar el párrafo un poco más
+        line-height: 1.5; // Mejorar la legibilidad
+    }
+
+    .social-links {
+        display: flex; // Usar flexbox para alinear los íconos
+        justify-content: center; // Centrar los íconos
+        margin-top: 20px; // Espaciado superior
+        flex-wrap: wrap; // Permitir que los íconos se envuelvan en pantallas pequeñas
+
+        i {
+            padding: 12px;
+            border-radius: 50%; // Hacer los íconos circulares
+            font-size: 18px; // Aumentar el tamaño de los íconos
+            background: rgba(177, 12, 67, 0.8); // Fondo semi-transparente
+            color: rgb(255, 246, 246);
+            margin: 8px; // Espaciado más consistente
+            transition: background 0.3s ease, transform 0.3s ease; // Animaciones más suaves
+
+            &:hover {
+                background: $primary-color; // Color de fondo al pasar el cursor
+                transform: scale(1.1); // Aumento de tamaño al pasar el cursor
+            }
+        }
+    }
+}
+
+
+// Galería
+.galeria {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    height: 100vh;
+    background-color: #01000c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #fff;
+        font-size: 55px;
+        margin: 80px 0;
+
+    }
+
+    .swiper {
+        width: 80%;
+        height: 100%;
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 250px;
+
+            img {
+                display: block;
+                width: 100%;
+                -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0002, #0004);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 40px;
+            margin: 40px 0;
+        }
+
+        .swiper {
+            width: 90%;
+            height: auto;
+
+            .swiper-slide {
+                width: 200px;
+            }
+        }
+    }
+
+    .back-button {
+        padding: 0.8em;
+        font-size: 14px;
+    }
+}
+
+// Contact Section
+.contact {
+    background: $background-color; 
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+
+    .container {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .contact-wrapper {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, .3);
+        margin: 2em 0;
+        overflow: hidden;
+
+        > * {
+            padding: 1em;
+        }
+
+        .contact-form {
+            background: $light-background;
+
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                label {
+                    display: block;
+                    color: black;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 1em;
+                }
+
+                .block {
+                    grid-column: 1 / 3;
+                }
+
+                button, input, textarea {
+                    width: 100%;
+                    padding: .7em;
+                    border: none;
+                    background: none;
+                    outline: 0;
+                    color: $background-color;
+                    border-bottom: 1px solid #b10c43;
+
+                    &:hover, &:focus {
+                        background: #b10c43;
+                        color: #ffffff;
+                        transition: background-color 1s ease-out;
+                        outline: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact Info
+    .contact-info {
+        background: #b10c43;
+
+        h4, ul, p {
+            text-align: center;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    // Large Size
+    @media (min-width: 700px) {
+        body {
+            padding: 0 4em;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            > * {
+                padding: 2em; 
+            }
+
+            .contact-info h4,
+            .contact-info ul,
+            .contact-info p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.services {
+    background: #02031a;
+    padding: 50px;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #02031a;
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 3em;
+            color: #fff;
+            margin: 25px;
+            text-shadow: 0px 3px 3px #ff0841;
+        }
+    }
+
+    .card {
+        min-height: 220px; 
+        height: 300px;
+        width: 320px;
+        padding: 25px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        margin: 16px 5px;
+        box-shadow: rgba(0,0,0,0.1) 0px 4px 12px, 0px 15px 30px rgba(0,0,0,0.2);
+        flex-grow: 1; 
+        cursor: pointer;
+
+        i {
+            font-size: 80px;
+            text-align: center;
+            color: #ff0841;
+            margin: 20px;
+            transition: font-size 0.3s ease;
+        }
+
+        .card-body {
+            text-align: center;
+
+            h3 {
+                font-weight: 600;
+            }
+        }
+
+        h2 {
+            margin-bottom: 12px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &:hover {
+            i,
+            p {
+                color: #fff; 
+                font-size: 1.2em; 
+                text-align: center;
+            }
+
+            h2 {
+                font-weight: 600;
+            }
+
+            &:nth-child(n):hover {
+                background: linear-gradient(45deg, #b10c43, rgb(255, 0, 106) 100%);
+            }
+        }
+    }
+
+    .content-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1000px; 
+        margin-top: 30px;
+        align-items: stretch; 
+    }
+}
+
+@media(max-width: 991px) {
+    .services {
+        .card {
+            height: 300px;
+            flex-grow: 0; 
+            min-width: 300px;
+            margin: 10px auto;
+        }
+
+        .wrapper {
+            h1 {
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+        }
+
+        .content-box {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
