@@ -188,51 +188,73 @@ $font-family: "Imprima", sans-serif;
             color: #ffffff;
             text-shadow: 0px 3px 3px $primary-color;
             font-weight: 600;
-            font-size: 2em; // Cambiado para mejor ajuste en móviles
+            font-size: 2em; // Tamaño de fuente ajustado para mejorar la visibilidad
         }
     }
 
     .row {
         margin-top: 40px;
-        display: flex; // Flex para lograr un mejor alineamiento
-        flex-wrap: wrap; // Permitir que los items se envuelvan
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center; // Centrar elementos
     }
 
     form {
         display: flex;
-        flex-direction: column; // Cambiar a columna para móviles
-        align-items: center; // Centrar los elementos del formulario
+        flex-direction: column; // Mantener columnas para móviles
+        align-items: center;
 
         input,
         textarea {
-            width: 90%; // Hacer que el input ocupe más ancho en móviles
-            max-width: 500px; // Establecer un ancho máximo
+            width: 90%; // Ancho máximo del formulario
+            max-width: 500px; // Ancho máximo para pantallas más grandes
+            margin-bottom: 15px; // Espacio entre los campos
+            padding: 10px; // Añadir un poco de padding a los inputs
+            border: 1px solid #ccc; // Estilo opcional para borde
+            border-radius: 5px; // Bordes redondeados
         }
     }
 
     .submit {
-        width: 90%; // Tendrá un mejor ajuste en móviles
-        max-width: 160px; // Establecer un ancho máximo
-        margin: 15px auto; // Centrar el botón
+        width: 90%; // Ajuste para móviles
+        max-width: 160px;
+        margin: 15px auto;
+        padding: 10px; // Añadir padding
+        background-color: $primary-color; // Cambiar si es necesario
+        color: #ffffff; // Color del texto
+        border: none; // Sin borde
+        border-radius: 5px; // Bordes redondeados
+        cursor: pointer; // Señaliza que es clickeable
+        transition: background-color 0.3s; // Efecto de transición
+
+        &:hover {
+            background-color: darken($primary-color, 10%); // Efecto hover para mejor interacción
+        }
     }
 
     @media (max-width: 765px) {
-        padding: 20px; // Ajustar padding en móviles
+        padding: 20px; // Ajustar el padding en móviles
 
         .main-text h1 {
-            padding: 10px; // Ajuste de padding
-            font-size: 1.5em;
+            padding: 10px; // Ajustes de padding
+            font-size: 1.5em; // Reducir el tamaño de la fuente para móviles
         }
 
         form {
             input,
             textarea {
-                width: 100%; // Que ocupen el 100% en móviles
+                width: 100%; // 100% de ancho en móviles
+                padding: 15px; // Ajustar padding en móviles
             }
+        }
+
+        .submit {
+            width: 100%; // Botón de envío ocupa todo el ancho en móviles
+            max-width: none; // Sin límite de ancho
         }
     }
 }
+
 
 // Packages Section
 .packages {
@@ -672,8 +694,12 @@ $font-family: "Imprima", sans-serif;
         color: white;
         text-shadow: 0px 3px 3px $primary-color;
         text-align: center;
-        font-size: 2em; // Cambiado para responsividad
+        font-size: 2em; // Mantener tamaño grande en pantallas grandes
         margin-bottom: 20px;
+
+        @media(max-width: 450px) {
+            font-size: 1.5em; // Reducir tamaño en móviles
+        }
     }
 
     .content-box {
@@ -685,8 +711,8 @@ $font-family: "Imprima", sans-serif;
 
     .card {
         min-height: 220px; 
-        height: auto; // Cambiado para mejor responsividad
-        width: 300px; // Hacer la tarjeta más estrecha
+        height: auto; // Permitido para mejor responsividad
+        width: 300px; // Ancho inicial
         padding: 25px;
         border-radius: 5px;
         display: flex;
@@ -718,7 +744,7 @@ $font-family: "Imprima", sans-serif;
 
     @media(max-width: 991px) {
         .card {
-            min-width: 150px; // Ajustar mínimo tamaño de tarjeta
+            min-width: 180px; // Ajustar mínimo tamaño de tarjeta
             margin: 10px; // Mejorar consistencia del margen
             flex: 1 0 calc(45% - 20px); // Ajustar flex para adaptarse
         }
@@ -727,8 +753,12 @@ $font-family: "Imprima", sans-serif;
     @media(max-width: 450px) {
         .card {
             width: 90%; // Más ancho en móviles
-            margin: 10px auto; // Centrar tarjeta
+            margin: 10px auto; // Centrar la tarjeta
+            padding: 15px; // Ajustar el padding para espacios reducidos
+        }
+
+        h1 {
+            font-size: 1.5em; // Ajustar tamaño del encabezado
         }
     }
 }
-
