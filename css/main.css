@@ -166,62 +166,69 @@
 }
 .book {
   background: #02031a;
-  padding: 60px;
+  padding: 60px 20px;
 }
 .book .main-text h1 {
   text-align: center;
   color: #ffffff;
   text-shadow: 0px 3px 3px #ff0841;
   font-weight: 600;
-}
-.book .card {
-  border-radius: 6px;
-  box-shadow: 0px 8px 10px -6px #000000;
+  font-size: 2em;
 }
 .book .row {
   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.book form input {
-  padding: 10px;
-  color: black;
-  border: none;
-  width: 500px;
-  outline: none;
-  font-size: 16px;
-  border-radius: 6px;
-  box-shadow: 0px 5px 5px -6px rgb(7, 98, 114);
+.book form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.book form input,
 .book form textarea {
-  border: none;
-  border-radius: 10px;
-  resize: none;
-  box-shadow: 0px 5px 5px -6px black;
-  width: 500px;
-  height: 150px;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .book .submit {
-  width: 160px;
-  font-size: 16px;
-  font-weight: 550;
-  background: #ff0841;
-  color: white;
-  margin-top: 15px;
-  transition: 0.5s;
+  width: 90%;
+  max-width: 160px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: #ff0841;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .book .submit:hover {
-  width: 170px;
+  background-color: rgb(212, 0, 48.9230769231);
 }
-
 @media (max-width: 765px) {
   .book {
-    padding: 0;
+    padding: 20px;
   }
   .book .main-text h1 {
-    padding: 20px;
+    padding: 10px;
     font-size: 1.5em;
-    text-align: center;
+  }
+  .book form input,
+  .book form textarea {
+    width: 100%;
+    padding: 15px;
+  }
+  .book .submit {
+    width: 100%;
+    max-width: none;
   }
 }
+
 .packages {
   background: #eff0ff;
   padding: 60px 20px;
@@ -581,97 +588,69 @@
 
 .services {
   background: #02031a;
-  padding: 50px;
+  padding: 50px 20px;
 }
-.services * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.services h1 {
+  color: white;
+  text-shadow: 0px 3px 3px #ff0841;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
-.services .wrapper {
-  font-family: "Quicksand", sans-serif;
+@media (max-width: 450px) {
+  .services h1 {
+    font-size: 1.5em;
+  }
+}
+.services .content-box {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #02031a;
-}
-.services .wrapper h1 {
-  font-family: sans-serif;
-  font-size: 3em;
-  color: #fff;
-  margin: 25px;
-  text-shadow: 0px 3px 3px #ff0841;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 .services .card {
   min-height: 220px;
-  height: 300px;
-  width: 320px;
+  height: auto;
+  width: 300px;
   padding: 25px;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   background: #fff;
-  margin: 16px 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, 0px 15px 30px rgba(0, 0, 0, 0.2);
+  margin: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   flex-grow: 1;
-  cursor: pointer;
 }
 .services .card i {
-  font-size: 80px;
-  text-align: center;
+  font-size: 60px;
   color: #ff0841;
   margin: 20px;
-  transition: font-size 0.3s ease;
 }
 .services .card .card-body {
   text-align: center;
 }
 .services .card .card-body h3 {
   font-weight: 600;
-}
-.services .card h2 {
-  margin-bottom: 12px;
-  font-weight: 400;
-  text-align: center;
-}
-.services .card:hover i,
-.services .card:hover p {
-  color: #fff;
   font-size: 1.2em;
-  text-align: center;
 }
-.services .card:hover h2 {
-  font-weight: 600;
-}
-.services .card:hover:nth-child(n):hover {
+.services .card:hover {
   background: linear-gradient(45deg, #b10c43, rgb(255, 0, 106) 100%);
 }
-.services .content-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 1000px;
-  margin-top: 30px;
-  align-items: stretch;
-}
-
 @media (max-width: 991px) {
   .services .card {
-    height: 300px;
-    flex-grow: 0;
-    min-width: 300px;
+    min-width: 180px;
+    margin: 10px;
+    flex: 1 0 calc(45% - 20px);
+  }
+}
+@media (max-width: 450px) {
+  .services .card {
+    width: 90%;
     margin: 10px auto;
+    padding: 15px;
   }
-  .services .wrapper h1 {
-    font-size: 2.5em;
-    font-weight: 600;
-  }
-  .services .content-box {
-    flex-direction: column;
-    width: 100%;
+  .services h1 {
+    font-size: 1.5em;
   }
 }
 
