@@ -818,17 +818,15 @@ $font-family: "Imprima", sans-serif;
             }
         }
 
-        // Estilo para el cuerpo del acordeón
         .accordion-body {
             background: #ffffff; // Fondo limpio para el cuerpo
-            color: #34495e; // Color del texto del cuerpo
+            color: #000000; // Cambiado a negro
             padding: 20px; // Espaciado interno
             font-size: 16px; // Tamaño de fuente del texto
             line-height: 1.6; // Espaciado entre líneas
             border-top: 1px solid #ecf0f1; // Borde superior para separación
-
-            // Puedes agregar más estilos de texto aquí si lo deseas
         }
+        
     }
 
     @media (max-width: 768px) {
