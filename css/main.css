@@ -656,50 +656,64 @@
 
 /* FAQ Section Start */
 .faq {
-  background: #eff0ff;
-  padding: 50px 0;
-}
-.faq h2 {
-  color: #02031a;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-.faq .accordion-item {
-  margin-bottom: 15px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.faq .accordion-item .accordion-header {
-  background: #b10c43;
-}
-.faq .accordion-item .accordion-button {
-  color: black;
-  font-weight: 550;
-  background: #b10c43;
-  border: none;
-  transition: background 0.3s ease;
-}
-.faq .accordion-item .accordion-button:hover {
-  background: #ff0841;
-}
-.faq .accordion-item .accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-.faq .accordion-item .accordion-body {
-  background: #fff;
-  color: #02031a;
-  padding: 15px;
+  background: #eff0ff; /* Color de fondo suave para la sección FAQ */
+  padding: 50px 0; /* Espaciado vertical */
 }
 
+.faq h2 {
+  color: #02031a; /* Color del texto del título */
+  font-weight: 600;
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+/* Estilo para los ítems del acordeón */
+.accordion-item {
+  margin-bottom: 15px; /* Espaciado entre ítems */
+  border-radius: 5px; /* Bordes redondeados */
+  overflow: hidden; /* Para que el borde redondeado funcione correctamente */
+}
+
+/* Estilo para el encabezado del acordeón */
+.accordion-header {
+  background: #b10c43; /* Color de fondo para el encabezado */
+}
+
+/* Estilo para el botón del acordeón */
+.accordion-button {
+  color: white; /* Color del texto del botón */
+  font-weight: 550; /* Peso de la fuente */
+  background: #b10c43; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  transition: background 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Estilo para el botón en estado hover */
+.accordion-button:hover {
+  background: #ff0841; /* Color de fondo en hover */
+}
+
+/* Estilo para el cuerpo del acordeón */
+.accordion-body {
+  background: #fff; /* Fondo para el cuerpo del acordeón */
+  color: #02031a; /* Color del texto del cuerpo */
+  padding: 15px; /* Espaciado interno */
+}
+
+/* Estilo para animaciones de collapsible */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra al estar enfocado */
+}
+
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .faq {
-    padding: 30px 0;
+    padding: 30px 0; /* Menos padding en pantallas pequeñas */
   }
   .faq h2 {
-    font-size: 28px;
+    font-size: 28px; /* Reducir tamaño de fuente en pantallas pequeñas */
   }
-  .faq .accordion-button {
-    font-size: 14px;
+  .accordion-button {
+    font-size: 14px; /* Ajustar tamaño de fuente del botón */
   }
 }
 /* FAQ Section End */
