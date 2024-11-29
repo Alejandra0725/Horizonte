@@ -694,7 +694,6 @@
 
 /* Estilo para el cuerpo del acordeón */
 .accordion-body {
-  background: #fff; /* Fondo para el cuerpo del acordeón */
   color: #02031a; /* Color del texto del cuerpo */
   padding: 15px; /* Espaciado interno */
 }
