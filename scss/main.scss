@@ -781,6 +781,7 @@ $font-family: "Imprima", sans-serif;
     margin-bottom: 15px; /* Espaciado entre ítems */
     border-radius: 5px; /* Bordes redondeados */
     overflow: hidden; /* Para que el borde redondeado funcione correctamente */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para mayor énfasis */
 }
 
 /* Estilo para el encabezado del acordeón */
@@ -804,7 +805,6 @@ $font-family: "Imprima", sans-serif;
 
 /* Estilo para el cuerpo del acordeón */
 .accordion-body {
-
     color: #02031a; /* Color del texto del cuerpo */
     padding: 15px; /* Espaciado interno */
 }
@@ -830,5 +830,3 @@ $font-family: "Imprima", sans-serif;
 }
 
 /* FAQ Section End */
-
-
