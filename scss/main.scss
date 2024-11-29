@@ -766,64 +766,82 @@ $font-family: "Imprima", sans-serif;
 
 /* FAQ Section Start */
 .faq {
-    background: #eff0ff; // Color de fondo suave para la sección FAQ
-    padding: 50px 0; // Espaciado vertical
+    background: #f9f9ff; // Color de fondo más claro y suave
+    padding: 60px 20px; // Espaciado vertical con padding lateral
 
     h2 {
-        color: #02031a; // Color del texto del título
-        font-weight: 600;
-        margin-bottom: 30px; // Espaciado inferior
+        color: #2c3e50; // Color del texto del título más elegante
+        font-weight: 700; // Aumentar el peso de la fuente
+        font-size: 32px; // Tamaño de fuente grande
+        text-align: center; // Centrar el título
+        margin-bottom: 40px; // Espaciado inferior
     }
 
     // Estilo para los ítems del acordeón
     .accordion-item {
-        margin-bottom: 15px; // Espaciado entre ítems
-        border-radius: 5px; // Bordes redondeados
+        margin-bottom: 20px; // Espaciado entre ítems
+        border-radius: 8px; // Bordes más redondeados
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); // Agregar sombra para un efecto elevado
         overflow: hidden; // Para que el borde redondeado funcione correctamente
 
         // Estilo para el encabezado del acordeón
         .accordion-header {
-            background: #b10c43; // Color de fondo para el encabezado
+            background: #c0392b; // Color de fondo para el encabezado
+            border: 1px solid #bdc3c7; // Agregar borde delgado
+            border-radius: 8px 8px 0 0; // Bordes redondeados en la parte superior
 
             // Estilo para el botón del acordeón
             .accordion-button {
-                color: white; // Color del texto del botón
-                font-weight: 550; // Peso de la fuente
-                background: #b10c43; // Color de fondo del botón
+                color: #ecf0f1; // Color del texto más claro
+                font-weight: 600; // Peso de la fuente
+                background: transparent; // Fondo transparente
                 border: none; // Sin borde
-                transition: background 0.3s ease; // Transición suave para el fondo
+                padding: 15px 20px; // Espaciado interno
+                display: flex; // Usar flex para alinear el texto
+                justify-content: space-between; // Justificar el contenido
+                align-items: center; // Centrar verticalmente
+                transition: background 0.3s ease, transform 0.3s ease; // Transiciones más suaves
 
                 // Estilo para el botón en estado hover
                 &:hover {
-                    background: #ff0841; // Color de fondo en hover
+                    background: rgba(255, 87, 34, 0.7); // Color de fondo en hover
+                    transform: translateY(-2px); // Efecto sutil de elevación
                 }
 
                 // Estilo para animaciones de collapsible
                 &:focus {
-                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); // Sombra al estar enfocado
+                    outline: none; // Sin contorno
+                    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.5); // Sombra al estar enfocado
                 }
 
                 // Ajustar tamaño de fuente del botón en pantallas pequeñas
                 @media (max-width: 768px) {
-                    font-size: 14px; // Ajustar tamaño de fuente del botón
+                    font-size: 16px; // Tamaño de fuente adecuado en pantallas pequeñas
                 }
             }
         }
 
         // Estilo para el cuerpo del acordeón
         .accordion-body {
-            background: #fff; // Fondo para el cuerpo del acordeón
-            color: #02031a; // Color del texto del cuerpo
-            padding: 15px; // Espaciado interno
+            background: #ffffff; // Fondo limpio para el cuerpo del acordeón
+            color: #34495e; // Color del texto del cuerpo
+            padding: 20px; // Espaciado interno
+            font-size: 16px; // Tamaño de fuente del texto
+            line-height: 1.6; // Espaciado entre líneas
+
+            // Agregar un borde superior para separar visualmente
+            border-top: 1px solid #ecf0f1;
+
+            // Puedes agregar más estilos del texto dentro del cuerpo aquí
         }
     }
 
     // Media query para pantallas pequeñas
     @media (max-width: 768px) {
-        padding: 30px 0; // Menos padding en pantallas pequeñas
+        padding: 40px 10px; // Ajustar padding en pantallas pequeñas
 
         h2 {
-            font-size: 28px; // Reducir tamaño de fuente en pantallas pequeñas
+            font-size: 26px; // Reducir tamaño de fuente en pantallas pequeñas
         }
     }
 }
