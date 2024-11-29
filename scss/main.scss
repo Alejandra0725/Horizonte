@@ -781,15 +781,15 @@ $font-family: "Imprima", sans-serif;
     .accordion-item {
         margin-bottom: 20px; // Espaciado entre ítems
         border-radius: 8px; // Bordes más redondeados
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); // Agregar sombra para un efecto elevado
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); // Sombra para un efecto elevado
         overflow: hidden; // Para que el borde redondeado funcione correctamente
 
         // Estilo para el encabezado del acordeón
         .accordion-header {
             background: #c0392b; // Color de fondo para el encabezado
-            border: 1px solid #bdc3c7; // Agregar borde delgado
+            border: 1px solid #bdc3c7; // Borde delgado
             border-radius: 8px 8px 0 0; // Bordes redondeados en la parte superior
-
+            
             // Estilo para el botón del acordeón
             .accordion-button {
                 color: #ecf0f1; // Color del texto más claro
@@ -800,50 +800,45 @@ $font-family: "Imprima", sans-serif;
                 display: flex; // Usar flex para alinear el texto
                 justify-content: space-between; // Justificar el contenido
                 align-items: center; // Centrar verticalmente
-                transition: background 0.3s ease, transform 0.3s ease; // Transiciones más suaves
+                transition: background 0.3s ease, transform 0.3s ease; // Transiciones suaves
 
-                // Estilo para el botón en estado hover
                 &:hover {
                     background: rgba(255, 87, 34, 0.7); // Color de fondo en hover
                     transform: translateY(-2px); // Efecto sutil de elevación
                 }
 
-                // Estilo para animaciones de collapsible
                 &:focus {
                     outline: none; // Sin contorno
                     box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.5); // Sombra al estar enfocado
                 }
 
-                // Ajustar tamaño de fuente del botón en pantallas pequeñas
                 @media (max-width: 768px) {
-                    font-size: 16px; // Tamaño de fuente adecuado en pantallas pequeñas
+                    font-size: 16px; // Tamaño de fuente adecuado
                 }
             }
         }
 
         // Estilo para el cuerpo del acordeón
         .accordion-body {
-            background: #ffffff; // Fondo limpio para el cuerpo del acordeón
+            background: #ffffff; // Fondo limpio para el cuerpo
             color: #34495e; // Color del texto del cuerpo
             padding: 20px; // Espaciado interno
             font-size: 16px; // Tamaño de fuente del texto
             line-height: 1.6; // Espaciado entre líneas
+            border-top: 1px solid #ecf0f1; // Borde superior para separación
 
-            // Agregar un borde superior para separar visualmente
-            border-top: 1px solid #ecf0f1;
-
-            // Puedes agregar más estilos del texto dentro del cuerpo aquí
+            // Puedes agregar más estilos de texto aquí si lo deseas
         }
     }
 
-    // Media query para pantallas pequeñas
     @media (max-width: 768px) {
         padding: 40px 10px; // Ajustar padding en pantallas pequeñas
 
         h2 {
-            font-size: 26px; // Reducir tamaño de fuente en pantallas pequeñas
+            font-size: 26px; // Reducir tamaño de fuente
         }
     }
 }
 
 /* FAQ Section End */
+
