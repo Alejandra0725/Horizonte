@@ -1,0 +1,66 @@
+/* FAQ Section Start */
+.faq {
+    background: #eff0ff; 
+    padding: 50px 0; 
+}
+
+.faq h2 {
+    color: #02031a; 
+    font-weight: 600;
+    margin-bottom: 30px; 
+}
+
+/* Estilo para los ítems del acordeón */
+.accordion-item {
+    margin-bottom: 15px; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* Estilo para el encabezado del acordeón */
+.accordion-header {
+    background: #b10c43; 
+}
+
+/* Estilo para el botón del acordeón */
+.accordion-button {
+    color: white; 
+    font-weight: 550; 
+    background: #b10c43; 
+    border: none; 
+    transition: background 0.3s ease; 
+}
+
+/* Estilo para el botón en estado hover */
+.accordion-button:hover {
+    background: #ff0841; 
+}
+
+/* Estilo para el cuerpo del acordeón */
+.accordion-body {
+    color: #02031a; 
+    padding: 15px; 
+}
+
+/* Estilo para animaciones de collapsible */
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .faq {
+        padding: 30px 0; 
+    }
+
+    .faq h2 {
+        font-size: 28px; 
+    }
+
+    .accordion-button {
+        font-size: 14px; 
+    }
+}
+
+/* FAQ Section End */

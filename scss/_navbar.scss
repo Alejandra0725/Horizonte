@@ -1,0 +1,42 @@
+// Navbar
+#navbar {
+    background: $background-color;
+
+    #logo {
+        font-size: 40px;
+        color: $secondary-color;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-nav {
+        margin-left: 20px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 18px;
+                font-weight: 550;
+                color: rgb(255, 255, 255);
+                letter-spacing: 3px;
+                border-radius: 6px;
+                transition: 0.5s ease;
+
+                &:hover {
+                    background: $primary-color;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: white;
+        @include button-style();
+    }
+}
+

@@ -1,0 +1,81 @@
+.services {
+    background: $background-color;
+    padding: 50px 20px; // Ajustar el padding lateral
+
+    h1 {
+        color: white;
+        text-shadow: 0px 3px 3px $primary-color;
+        text-align: center;
+        font-size: 2em; // Mantener tamaño grande en pantallas grandes
+        margin-bottom: 20px;
+
+        @media(max-width: 450px) {
+            font-size: 1.5em; // Reducir tamaño en móviles
+        }
+    }
+
+    .content-box {
+        display: flex;
+        justify-content: center; // Centrar los elementos
+        flex-wrap: wrap; // Permitir que se envuelvan
+        margin-top: 30px;
+    }
+
+.card {
+    min-height: 220px; 
+    height: auto; // Permitido para mejor responsividad
+    width: 300px; // Ancho inicial
+    padding: 25px;
+    border-radius: 15px; // Aumentar el radio del borde para bordes más suaves
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 16px; // Ajustar márgenes
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px; // Sombra inicial
+    flex-grow: 1; // Permitir que las tarjetas crezcan
+    border: 2px solid transparent; // Borde inicial transparente
+    position: relative; // Necesario para el efecto de borde
+    transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; // Transiciones suaves al hacer hover
+
+    // Efecto de borde que cambia al pasar el ratón
+    &:hover {
+        background: linear-gradient(45deg, #b10c43, rgb(255, 0, 106) 100%); // Fondo en degradado al hacer hover
+        border: 2px solid #ff0841; // Borde colorido al hacer hover
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; // Aumentar la sombra al hacer hover
+    }
+
+    i {
+        font-size: 60px; // Ajustar tamaño del ícono
+        color: #ff0841; // Color del ícono
+        margin: 20px; // Espaciado alrededor del ícono
+    }
+
+    .card-body {
+        text-align: center; // Centrar texto
+
+        h3 {
+            font-weight: 600; // Peso de la fuente
+            font-size: 1.2em; // Ajustar tamaño de texto
+        }
+    }
+}
+    @media(max-width: 991px) {
+        .card {
+            min-width: 180px; // Ajustar mínimo tamaño de tarjeta
+            margin: 10px; // Mejorar consistencia del margen
+            flex: 1 0 calc(45% - 20px); // Ajustar flex para adaptarse
+        }
+    }
+
+    @media(max-width: 450px) {
+        .card {
+            width: 90%; // Más ancho en móviles
+            margin: 10px auto; // Centrar la tarjeta
+            padding: 15px; // Ajustar el padding para espacios reducidos
+        }
+
+        h1 {
+            font-size: 1.5em; // Ajustar tamaño del encabezado
+        }
+    }
+}

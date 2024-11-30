@@ -1,0 +1,29 @@
+// Services Section
+.services {
+    background: $background-color;
+    padding: 50px;
+
+    h1 {
+        @include header-style();
+    }
+
+    .card {
+        @include card-style();
+        cursor: pointer;
+
+        i {
+            font-size: 80px;
+            text-align: center;
+            color: $primary-color;
+            margin-top: 20px;
+        }
+
+        .card-body {
+            text-align: center;
+
+            h3 {
+                font-weight: 600;
+            }
+        }
+    }
+}

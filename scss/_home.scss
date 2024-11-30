@@ -1,0 +1,98 @@
+// Home Section
+.home {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        padding-top: 15%;
+
+        h5 {
+            font-size: 38px;
+            font-weight: 550;
+            text-shadow: 0px 1px 1px black;
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 550;
+            text-shadow: 0px 1px 1px black, 0px 2px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            text-shadow: 0px 1px 1px black;
+            margin-bottom: 30px;
+            margin-top: 5px;
+        }
+
+        a {
+            @include button-style(white, black);
+            letter-spacing: 2px;
+            font-weight: 550;
+            text-decoration: none;
+        }
+    }
+}
+
+// Animation for changecontent
+.changecontent::after {
+    content: ' ';
+    color: $secondary-color;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+    0% { content: "Francia"; }
+    10% { content: "España"; }
+    20% { content: "Venezuela"; }
+    30% { content: "China"; }
+    40% { content: "Inglaterra"; }
+    50% { content: "Estados Unidos"; }
+    60% { content: "Italia"; }
+    70% { content: "Colombia"; }
+    80% { content: "Corea del Sur"; }
+    90% { content: "Alemania"; }
+    100% { content: "Japón"; }
+}
+
+// Media Queries
+@media (max-width: 850px) {
+    .home {
+        background-position: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .home .content {
+        h5 {
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+}

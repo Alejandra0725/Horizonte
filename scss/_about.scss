@@ -1,0 +1,61 @@
+// About Section
+.about {
+    padding: 50px;
+    background: $background-color;
+
+    h1 {
+        @include header-style();
+        margin-bottom: 20px;
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f0f0f0;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    h2 {
+        color: white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: 10px 0;
+    }
+
+    p {
+        color: white;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    #about-btn {
+        @include button-style();
+        width: 150px;
+        height: 38px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 765px) {
+        padding: 20px;
+
+        #about-btn {
+            width: 100%;
+            height: 45px;
+        }
+    }
+}
